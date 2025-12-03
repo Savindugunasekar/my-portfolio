@@ -1,11 +1,14 @@
 
 import Link from 'next/link';
-import { RiYoutubeLine, RiInstagramLine, RiFacebookLine, RiBehanceLine, RiPinterestLine } from 'react-icons/ri'
+import { RiYoutubeLine, RiLinkedinLine, RiGithubLine, RiInstagramLine, RiFacebookLine, RiBehanceLine, RiPinterestLine } from 'react-icons/ri'
 
 const Socials = () => {
-  return <div className='flex items-center gap-x-5 text-lg'>
-    <Link href={''} className='hover:text-accent transition-all duration-300'>
-      <RiYoutubeLine />
+  return <div className='flex items-center gap-x-5 text-2xl'>
+    <Link href={'https://github.com/Savindugunasekar'} className='hover:text-accent transition-all duration-300'>
+      <RiGithubLine />
+    </Link>
+    <Link href={'https://www.linkedin.com/in/savindu-gunasekara/'} className='hover:text-accent transition-all duration-300'>
+      <RiLinkedinLine />
     </Link>
     <Link href={''} className='hover:text-accent transition-all duration-300'>
       <RiInstagramLine />
@@ -13,12 +16,8 @@ const Socials = () => {
     <Link href={''} className='hover:text-accent transition-all duration-300'>
       <RiFacebookLine />
     </Link>
-    <Link href={''} className='hover:text-accent transition-all duration-300'>
-      <RiBehanceLine />
-    </Link>
-    <Link href={''} className='hover:text-accent transition-all duration-300'>
-      <RiPinterestLine />
-    </Link>
+
+
 
   </div>;
 };

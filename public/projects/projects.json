@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": 5,
       "title": "Digital Banking Platform",
       "subtitle": "Microservices-based neobank simulation with Kubernetes and CI/CD",
       "shortSummary": "A production-style digital banking platform with microservices for authentication, accounts, transactions, fraud detection, and notifications.",
@@ -25,10 +25,11 @@
         "Created CI/CD pipelines using GitHub Actions.",
         "Built customer and admin dashboards."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/1.png",
+      "github": "https://github.com/Savindugunasekar/DigitalBank-Microservices.git"
     },
     {
-      "id": 2,
+      "id": 1,
       "title": "SDG Co-Benefit Intelligence System",
       "subtitle": "AI-powered scoring for carbon projects based on SDG co-benefits and risk",
       "shortSummary": "A research-driven system that analyzes carbon project documents and external data to score SDG co-benefits, permanence, and risk.",
@@ -50,10 +51,11 @@
         "Created dashboard for score visualization.",
         "Integrated external risk signals."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/2.png",
+      "github":""
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "SmartChat SaaS Platform",
       "subtitle": "Multi-tenant AI chatbot builder for support and booking",
       "shortSummary": "A SaaS to let businesses train AI agents on their own documents and embed chat widgets.",
@@ -75,7 +77,8 @@
         "Built chatbot management dashboard.",
         "Developed embeddable chat widget."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/3.png",
+      "github":"https://github.com/Nethmalwje/Nexus_AI.git"
     },
     {
       "id": 4,
@@ -98,10 +101,11 @@
         "Implemented real-time vote updating.",
         "Created mobile-optimized UI and admin tools."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/4.png",
+      "github":"https://github.com/Savindugunasekar/pageantproject.git"
     },
     {
-      "id": 5,
+      "id": 3,
       "title": "Pet Care Companion Platform",
       "subtitle": "Pet profiles, health records, and service discovery",
       "shortSummary": "A platform for pet owners to manage pet profiles, health details, and discover relevant services.",
@@ -122,10 +126,11 @@
         "Built responsive UI for listing and viewing pets.",
         "Created consistent color palette and design system."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/5.png",
+      "github":"https://github.com/CS3940-Group01"
     },
     {
-      "id": 6,
+      "id": 2,
       "title": "Child Protection Authority MIS",
       "subtitle": "Secure management system for orphanages and adoption workflows",
       "shortSummary": "A secure Management Information System for handling orphanage and adoption workflows with role-based access.",
@@ -147,7 +152,8 @@
         "Created dashboards for monitoring activity.",
         "Ensured secure handling of sensitive data."
       ],
-      "preview": "/projectimg/preview.jpg"
+      "preview": "/projectimg/6.png",
+      "github":"https://github.com/Savindugunasekar/Orphanage-Management-System.git"
     }
   ]
 }

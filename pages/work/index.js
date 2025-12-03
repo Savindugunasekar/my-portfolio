@@ -12,7 +12,7 @@ export default function Work() {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full xl:mt-8 h-full flex justify-center items-center">
       <div className="w-[80vw] h-[80vh] relative">
 
         {/* PROJECT GRID */}

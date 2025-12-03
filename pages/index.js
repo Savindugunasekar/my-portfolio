@@ -12,23 +12,32 @@ const Home = () => {
     <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
       <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto'>
         {/* title */}
-        <motion.h1
+                <motion.h1
           variants={fadeIn('down', 0.2)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='h1'>
-          Transforming Ideas <br /> Into {' '}
-          <span className='text-accent'>Digital Reality</span>
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="h1 -mt-20"
+        >
+          Full-Stack Web &<br />
+          <span className="text-accent">Mobile Developer</span>
         </motion.h1>
+
         {/* subtitle */}
         <motion.p
           variants={fadeIn('down', 0.3)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium, nisl sed cursus tristique, nulla tortor tincidunt nisi, vitae hendrerit magna elit vel risus. Integer id lacus at sapien tempor bibendum. Vestibulum id metus quis justo venenatis consectetur.</motion.p>
-        {/* btn */}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+        >
+          I design and build end-to-end digital products — from pixel-perfect
+          UIs to scalable backends and cloud-ready microservices. Crafting
+          fast, reliable web and mobile apps that turn real-world ideas into
+          production-ready experiences.
+        </motion.p>
+
+    {/* btn */}
         <div className='flex justify-center xl:hidden relative'>
           <ProjectsBtn />
         </div>
@@ -45,9 +54,9 @@ const Home = () => {
     {/* Image */}
     <div className='w-[1200px] h-full absolute right-0 bottom-0'>
       {/* bg image */}
-      {/* <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'>
+      <div className='bg-none mt-16 xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute  translate-z-0'>
 
-      </div> */}
+      </div>
 
       {/* particles */}
 
@@ -58,7 +67,7 @@ const Home = () => {
         animate='show'
         exit='hidden'
         transition={{duration: 1, ease: 'easeInOut'}}
-        className='w-full h-full max-w-[637px] max-h-[578px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]'>
+        className='w-full mb-20 h-full max-w-[637px] max-h-[550px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]'>
         <Avatar />
       </motion.div>
 
