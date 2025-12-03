@@ -18,6 +18,16 @@
   color: #f13024;
 }
 
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;   /* IE/Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
@@ -48,4 +58,5 @@
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
+  
 }
