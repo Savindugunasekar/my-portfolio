@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -12,9 +13,11 @@ const cardVariants = {
   },
 };
 
-export default function ProjectCard({ data, index }) {
+export default function ProjectCard({ data, index, onClick }) {
   return (
     <motion.div
+      layoutId={`card-${data.id}`}
+      onClick={onClick}
       variants={cardVariants}
       initial="hidden"
       animate="show"
@@ -22,21 +25,20 @@ export default function ProjectCard({ data, index }) {
       whileHover={{
         y: -12,
         scale: 1.04,
-        transition: {
-          type: "spring",
-          stiffness: 220,
-          damping: 16,
-        },
+        transition: { type: "spring", stiffness: 220, damping: 16 },
       }}
       className="
-        relative rounded-3xl overflow-hidden group
+        relative rounded-3xl overflow-hidden group cursor-pointer
         bg-white/5 backdrop-blur-md border border-white/10
         min-h-[300px] md:min-h-[300px] xl:min-h-[250px]
         shadow-xl transition-all duration-300
       "
     >
-      {/* FULL COVER PREVIEW IMAGE */}
-      <div className="absolute inset-0 w-full h-full">
+      {/* FULL COVER IMAGE */}
+      <motion.div
+        layoutId={`image-${data.id}`}
+        className="absolute inset-0 w-full h-full"
+      >
         <Image
           src={data.preview}
           alt={data.title}
@@ -49,22 +51,22 @@ export default function ProjectCard({ data, index }) {
             group-hover:scale-110
           "
         />
-      </div>
+      </motion.div>
 
       {/* DARK GRADIENT OVERLAY */}
       <div
         className="
-          absolute inset-0
-          bg-gradient-to-t from-black/60 via-black/30 to-transparent
-          transition-all duration-500
+          absolute inset-0 bg-gradient-to-t
+          from-black/60 via-black/30 to-transparent
           group-hover:from-black/70 group-hover:via-black/40
+          transition-all duration-500
         "
       />
 
-      {/* Animated glow */}
+      {/* SUBTLE FLOATING GLOW */}
       <motion.div
         className="absolute inset-0 opacity-20 blur-2xl pointer-events-none"
-        animate={{ opacity: [0.15, 0.25, 0.15], scale: [1, 1.05, 1] }}
+        animate={{ opacity: [0.15, 0.3, 0.15], scale: [1, 1.05, 1] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         style={{
           background:
@@ -72,36 +74,25 @@ export default function ProjectCard({ data, index }) {
         }}
       />
 
-      {/* TITLE INSIDE IMAGE  */}
-      <div
-        className="
-          absolute bottom-0 left-0 right-0
-          p-5 md:p-6
-          z-20
-        "
+      {/* TITLE + SUBTITLE */}
+      <motion.div
+        layoutId={`title-${data.id}`}
+        className="absolute bottom-0 left-0 right-0 p-5 md:p-6 z-20"
       >
-        <h3
-          className="
-            text-white font-semibold
-            text-lg md:text-xl
-            drop-shadow-xl
-          "
-        >
+        <h3 className="text-white font-semibold text-lg md:text-xl drop-shadow-xl">
           {data.title}
         </h3>
-
         <p className="text-white/70 text-xs md:text-sm mt-1">
           {data.subtitle}
         </p>
-      </div>
+      </motion.div>
 
-      {/* BORDER SHINE ON HOVER */}
+      {/* BORDER SHINE */}
       <div
         className="
           absolute inset-0 rounded-3xl pointer-events-none
           opacity-0 group-hover:opacity-40
-          transition duration-500
-          border border-white/40
+          transition duration-500 border border-white/40
         "
       />
     </motion.div>
